@@ -78,12 +78,12 @@ class CustomizationUsingTableViewDelegate : UIViewController {
 }
 
 extension CustomizationUsingTableViewDelegate : UITableViewDelegate {
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 
         // you can also fetch item
         guard let item = dataSource?.itemAtIndexPath(indexPath),
         // .. or section and customize what you like
-            _ = dataSource?.sectionAtIndex(indexPath.section)
+            let _ = dataSource?.sectionAtIndex(indexPath.section)
             else {
             return 0.0
         }
